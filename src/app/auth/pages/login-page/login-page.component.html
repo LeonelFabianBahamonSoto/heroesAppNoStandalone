@@ -1,0 +1,36 @@
+<div class="relative align-items-center justify-content-center full-screen-container">
+
+    <div *ngIf="getResolutionImage() > 450; then thenBlock else elseBlock"></div>
+    <ng-template #thenBlock>
+        <img [src]="backgroundWebImage" class="full-screen-image">
+    </ng-template>
+    <ng-template #elseBlock>
+        <img [src]="backgroundMobileImage" class="full-screen-image">
+    </ng-template>
+
+    <div class="absolute align-items-center justify-content-center flex loginContainer">
+        <span class="titleContainer">Inicio de sesión</span>
+
+        <div class="login-form-container align-items-center justify-content-center flex">
+            <mat-form-field style="margin-rigth: 2.5%; width: 100%;">
+                <mat-label>Usuario</mat-label>
+                <input type="text" matInput placeholder="Nombre del usuario">
+            </mat-form-field>
+
+            <mat-form-field style="margin-left: 2.5%; width: 100%;">
+                <mat-label>Contraseña</mat-label>
+                <input type="password" matInput placeholder="Contraseña">
+            </mat-form-field>
+        </div>
+
+        <button class="buttonStyle" mat-button mat-flat-button style="background-color: blue; color: white">
+            <mat-icon>logout</mat-icon>
+            Iniciar sesión
+        </button>
+
+        <button class="buttonStyle" mat-button mat-flat-button style="background-color: white; color: black">
+            <a routerLink="/auth/new-account"> Registro </a>
+            <mat-icon>how_to_reg</mat-icon>
+        </button>
+    </div>
+</div>

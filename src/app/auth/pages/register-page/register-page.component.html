@@ -1,0 +1,33 @@
+<div class="relative align-items-center justify-content-center full-screen-container">
+
+    <div class="absolute align-items-center justify-content-center flex loginContainer">
+        <span class="titleContainer">Registro</span>
+
+        <div class="login-form-container align-items-center justify-content-center flex">
+            <mat-form-field style="width: 100%;">
+                <mat-label>Usuario</mat-label>
+                <input type="text" matInput placeholder="Nombre del usuario">
+            </mat-form-field>
+
+            <mat-form-field style="width: 100%;">
+                <mat-label>Nombre</mat-label>
+                <input type="text" matInput placeholder="Nombre completo">
+            </mat-form-field>
+
+            <mat-form-field style="width: 100%;">
+                <mat-label>Contraseña</mat-label>
+                <input type="password" matInput placeholder="Contraseña">
+            </mat-form-field>
+        </div>
+
+        <button class="buttonStyle" mat-button mat-flat-button style="background-color: blue; color: white">
+            <mat-icon>logout</mat-icon>
+            Registrarme
+        </button>
+
+        <button class="buttonStyle" mat-button mat-flat-button style="background-color: white; color: black">
+            <a routerLink="/auth/login">Tengo una cuenta</a>
+            <mat-icon>how_to_reg</mat-icon>
+        </button>
+    </div>
+</div>
