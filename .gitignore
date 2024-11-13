@@ -1,2 +1,3 @@
 # Omite los archivos de las dependencias del node modules
 node_modules/
+.angular/

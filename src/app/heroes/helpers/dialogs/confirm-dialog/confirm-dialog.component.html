@@ -1,0 +1,29 @@
+<h2
+    class="titleContainer"
+    mat-dialog-title
+>
+    {{this.data.title}}
+</h2>
+
+<mat-dialog-content class="textContainer">
+    {{this.data.text}} {{this.data.optionalData?.superhero}}
+</mat-dialog-content>
+
+<mat-dialog-actions class="buttonsContainer">
+    <button
+        mat-button mat-dialog-close mat-raised-button
+        [ngClass]="getButtonClass()"
+        (click)="onConfirmDialog()"
+    >
+        {{this.continueButtonTitle}}
+        <mat-icon>delete</mat-icon>
+    </button>
+
+    <button
+        mat-button mat-dialog-close cdkFocusInitial mat-raised-button
+        (click)="onCancelDialog()"
+    >
+        {{this.data.cancelButton}}
+        <mat-icon>cancel</mat-icon>
+    </button>
+</mat-dialog-actions>
