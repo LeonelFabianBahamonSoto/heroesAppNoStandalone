@@ -8,14 +8,6 @@
   ],
   "heroes": [
     {
-      "id": "dc-arrow",
-      "superhero": "Green Arrow",
-      "publisher": "DC Comics",
-      "alter_ego": "Oliver Queen",
-      "first_appearance": "More Fun Comics #73",
-      "characters": "Oliver Queen"
-    },
-    {
       "id": "dc-wonder",
       "superhero": "Wonder Woman",
       "publisher": "DC Comics",
