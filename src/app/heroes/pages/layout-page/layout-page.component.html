@@ -1,7 +1,7 @@
 <mat-sidenav-container fullscreen color="pink" style="background-color: #F3F3F3;">
     <mat-sidenav #sidenav mode="push" [ngStyle]="{ width: '15%' }">
         <mat-toolbar color="warn">
-            <span>Menú</span>
+            <span>{{this.getUser?.user}}</span>
             <span class="spacer"></span>
         </mat-toolbar>
 
@@ -17,15 +17,26 @@
         </mat-nav-list>
     </mat-sidenav>
 
-    <mat-toolbar color="primary">
-        <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-toolbar class="toolbarContainer">
+        <button
+            (click)="sidenav.toggle()"
+            class="buttonContainer"
+            mat-icon-button
+        >
             <mat-icon>menu</mat-icon>
+            <span class="buttonName">Menú</span>
         </button>
 
-        <span class="spacer"></span>
+        <!-- <span class="spacer"></span> -->
 
-        <button mat-icon-button (click)="sidenav.toggle()">
-            <mat-icon>Cerrar sesión</mat-icon>
+        <button
+            (click)="onLogout()"
+            class="buttonContainer"
+            mat-icon-button
+            style="right: 1%;"
+        >
+            <mat-icon>logout</mat-icon>
+            <span class="buttonName">Cerrar sesión</span>
         </button>
     </mat-toolbar>
 

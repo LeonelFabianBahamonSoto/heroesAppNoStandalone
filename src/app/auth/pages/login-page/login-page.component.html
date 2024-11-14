@@ -23,7 +23,11 @@
             </mat-form-field>
         </div>
 
-        <button class="buttonStyle" mat-button mat-flat-button style="background-color: blue; color: white">
+        <button
+            class="buttonStyle" mat-button mat-flat-button
+            style="background-color: blue; color: white"
+            (click)="onLogin()"
+        >
             <mat-icon>logout</mat-icon>
             Iniciar sesión
         </button>
